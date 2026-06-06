@@ -15,7 +15,7 @@ Create a public GitHub repository named `https://www.erkinsystems.qzz.io/` and p
 
 - Repo → **Settings → Pages**
 - Source: **Deploy from a branch → main → / (root)**
-- Custom domain: `[www.erkinsystems.qzz.io](https://www.erkinsystems.qzz.io/)` → Save
+- Custom domain: `https://www.erkinsystems.qzz.io/` → Save
 
 ### 3. Configure your domain
 
@@ -28,11 +28,11 @@ Add CN in CF:
 ### 4. Customize `_config.yml`
 
 ```yaml
-title:         "Erkin Systems"
+title:         "Erkin Systems, Inc"
 email:         "ryan@erkinsystems.com"
 phone:         "(714) 555-0192"
 address:       "Your real address"
-url:           "[https://www.erkinsystems.qzz.io](https://www.erkinsystems.qzz.io/)"
+url:           "https://www.erkinsystems.qzz.io/"
 formspree_id:  "YOUR_FORM_ID"
 ```
 
