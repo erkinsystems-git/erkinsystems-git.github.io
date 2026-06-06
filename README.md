@@ -1,6 +1,6 @@
-# Erkin Systems — Jekyll Theme
+# Erkin Systems, Inc
 
-A complete Jekyll website for a Managed Service Provider (MSP) in Orange County, CA.  
+A complete MSP website in Orange County, CA.  
 **Color palette:** Charcoal `#181818` · Orange `#FF6B00` · Light Gray `#F3F4F6` · White `#FFFFFF`
 
 ---
@@ -9,30 +9,30 @@ A complete Jekyll website for a Managed Service Provider (MSP) in Orange County,
 
 ### 1. Push to GitHub
 
-Create a public GitHub repository named `eric-git.github.io` and push all files to `main`.
+Create a public GitHub repository named `https://www.erkinsystems.qzz.io/` and push all files to `main`.
 
 ### 2. Enable GitHub Pages
 
 - Repo → **Settings → Pages**
 - Source: **Deploy from a branch → main → / (root)**
-- Custom domain: `erkinsystems.qzz.io` → Save
+- Custom domain: `[www.erkinsystems.qzz.io](https://www.erkinsystems.qzz.io/)` → Save
 
 ### 3. Configure your domain
 
-Ask the `qzz.io` admin to add:
+Add CN in CF:
 
-| Type  | Name          | Content               | Proxy    |
-|-------|---------------|-----------------------|----------|
-| CNAME | erkinsystems  | eric-git.github.io    | DNS only |
+| Type  | Name          | Content                   | Proxy    |
+|-------|---------------|---------------------------|----------|
+| CNAME | erkinsystems  | erkinsystems-git.github.io| DNS only |
 
 ### 4. Customize `_config.yml`
 
 ```yaml
 title:         "Erkin Systems"
-email:         "info@erkinsystems.com"
+email:         "ryan@erkinsystems.com"
 phone:         "(714) 555-0192"
 address:       "Your real address"
-url:           "https://erkinsystems.qzz.io"
+url:           "[https://www.erkinsystems.qzz.io](https://www.erkinsystems.qzz.io/)"
 formspree_id:  "YOUR_FORM_ID"
 ```
 
