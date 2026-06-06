@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===================== SEO Meta Tags ===================== -->
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:url"         content="{{ page.url | prepend: site.url }}" />
+  <meta property="og:site_name"   content="{{ site.title }}" />
+  <meta property="og:image"       content="{{ site.url }}/assets/img/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="{{ site.title }}" />
+  <meta name="twitter:description" content="{{ site.description }}" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | prepend: site.url }}" />
+
+  <!-- ===================== Fonts ===================== -->
+  <!-- Inter: clean, neutral, highly legible — ideal for tech/professional -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- ===================== Stylesheet ===================== -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}" />
+</head>
+<body>
+
+  <!-- ===================== Header / Nav ===================== -->
+  {% include header.html %}
+
+  <!-- ===================== Page Content ===================== -->
+  <main id="main-content">
+    {{ content }}
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  {% include footer.html %}
+
+  <!-- ===================== Scripts ===================== -->
+  <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
+
+</body>
+</html>

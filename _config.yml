@@ -1,0 +1,60 @@
+# ============================================================
+# _config.yml — Erkin Systems Jekyll Configuration
+# Hosted on GitHub Pages (no unsupported plugins)
+# ============================================================
+
+# --- Site Identity ---
+title: "Erkin Systems"
+tagline: "Reliable IT Solutions for Orange County Businesses"
+description: "Erkin Systems provides managed IT services, cybersecurity, cloud solutions, network management, and helpdesk support to small and medium businesses across Orange County, CA — including Irvine, Anaheim, Santa Ana, and Costa Mesa."
+author: "Erkin Systems"
+email: "info@erkinsystems.com"
+phone: "(714) 555-0192"
+address: "2600 Michelson Dr, Suite 400, Irvine, CA 92612"
+
+# --- Branding ---
+logo_text: "Erkin Systems"
+
+# --- URLs ---
+url: "https://www.erkinsystems.qzz.io"
+baseurl: ""
+
+# --- Social ---
+social:
+  linkedin: "https://linkedin.com/company/erkinsystems"
+  facebook: "https://facebook.com/erkinsystems"
+  twitter: "https://twitter.com/erkinsystems"
+
+# --- Navigation ---
+nav_links:
+  - title: "Home"
+    url: "/"
+  - title: "Services"
+    url: "/services/"
+  - title: "About"
+    url: "/about/"
+  - title: "Contact"
+    url: "/contact/"
+
+# --- Formspree ---
+# 1. Go to https://formspree.io and create a free account
+# 2. Create a new form and copy your form ID (e.g. xpwzabcd)
+# 3. Paste it below
+formspree_id: "YOUR_FORM_ID"
+
+# --- Build Settings ---
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# GitHub Pages whitelisted plugins only
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/

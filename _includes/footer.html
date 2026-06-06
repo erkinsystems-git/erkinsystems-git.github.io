@@ -1,0 +1,92 @@
+<!-- ============================================================
+  _includes/footer.html
+  Four-column footer: brand, quick links, services, contact
+============================================================ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <!-- Brand Column -->
+    <div class="footer-brand">
+      <a href="{{ '/' | prepend: site.baseurl }}" class="site-logo site-logo--light">
+        <span class="logo-icon"><i class="bi bi-shield-check"></i></span>
+        <span class="logo-text">{{ site.logo_text }}</span>
+      </a>
+      <p class="footer-brand__tagline">{{ site.tagline }}</p>
+      <p class="footer-brand__desc">
+        Serving small &amp; medium businesses across Orange County — Irvine, Anaheim, Santa Ana, Costa Mesa, and beyond.
+      </p>
+      <div class="footer-social">
+        {% if site.social.linkedin %}
+        <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        {% endif %}
+        {% if site.social.facebook %}
+        <a href="{{ site.social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        {% endif %}
+        {% if site.social.twitter %}
+        <a href="{{ site.social.twitter }}" target="_blank" rel="noopener" aria-label="Twitter / X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4 class="footer-heading">Quick Links</h4>
+      <ul>
+        {% for link in site.nav_links %}
+        <li><a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-links">
+      <h4 class="footer-heading">Services</h4>
+      <ul>
+        <li><a href="{{ '/services/' | prepend: site.baseurl }}#it-support">IT Support</a></li>
+        <li><a href="{{ '/services/' | prepend: site.baseurl }}#cybersecurity">Cybersecurity</a></li>
+        <li><a href="{{ '/services/' | prepend: site.baseurl }}#cloud">Cloud Services</a></li>
+        <li><a href="{{ '/services/' | prepend: site.baseurl }}#network">Network Management</a></li>
+        <li><a href="{{ '/services/' | prepend: site.baseurl }}#helpdesk">Helpdesk</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4 class="footer-heading">Contact Us</h4>
+      <ul>
+        <li>
+          <i class="bi bi-telephone-fill"></i>
+          <a href="tel:17145550192">{{ site.phone }}</a>
+        </li>
+        <li>
+          <i class="bi bi-envelope-fill"></i>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </li>
+        <li>
+          <i class="bi bi-geo-alt-fill"></i>
+          <span>{{ site.address }}</span>
+        </li>
+      </ul>
+      <a href="{{ '/contact/' | prepend: site.baseurl }}" class="btn btn-outline-light footer-cta">
+        Get Free Consultation
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <div class="container footer-bottom__inner">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+      <p class="footer-bottom__legal">
+        <a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a>
+      </p>
+    </div>
+  </div>
+</footer>

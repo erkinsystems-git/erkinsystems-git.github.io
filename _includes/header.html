@@ -1,0 +1,56 @@
+<!-- ============================================================
+  _includes/header.html
+  Sticky charcoal header with logo, nav links, and CTA button.
+  Mobile hamburger menu toggled via main.js.
+============================================================ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+
+    <!-- Logo / Brand -->
+    <a href="{{ '/' | prepend: site.baseurl }}" class="site-logo" aria-label="{{ site.title }} home">
+      <!-- Replace the span below with an <img> tag once you have a logo:
+           <img src="{{ '/assets/img/logo.svg' | prepend: site.baseurl }}" alt="{{ site.title }}" height="38" />
+      -->
+      <span class="logo-icon"><i class="bi bi-shield-check"></i></span>
+      <span class="logo-text">{{ site.logo_text }}</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    {% include nav.html %}
+
+    <!-- Header CTA -->
+    <a href="{{ '/contact/' | prepend: site.baseurl }}" class="btn btn-primary header-cta">
+      Free Consultation
+    </a>
+
+    <!-- Mobile Hamburger Toggle -->
+    <button class="nav-toggle" id="nav-toggle"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="mobile-nav">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav__list">
+      {% for link in site.nav_links %}
+      <li>
+        <a href="{{ link.url | prepend: site.baseurl }}"
+           class="mobile-nav__link {% if page.url == link.url %}active{% endif %}">
+          {{ link.title }}
+        </a>
+      </li>
+      {% endfor %}
+      <li>
+        <a href="{{ '/contact/' | prepend: site.baseurl }}" class="btn btn-primary mobile-nav__cta">
+          Free Consultation
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
